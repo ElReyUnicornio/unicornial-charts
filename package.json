@@ -1,0 +1,32 @@
+{
+  "name": "unicornial-charts",
+  "version": "0.0.0",
+  "description": "Chart library",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/unicornial-charts.umd.cjs",
+  "module": "./dist/unicornial-charts.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/unicornial-charts.js",
+      "require": "./dist/unicornial-charts.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "preview": "vite preview",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6"
+  }
+}
